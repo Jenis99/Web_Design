@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <script>
+        function calculate()
+        {
+            var num=[45,12,45,89,4,231,45,874,415,485,1521,12];
+            var l = num.length;
+            var opeven="";
+            var opodd="";
+            for(var i=0;i<l;i++)
+            {  
+                if(num[i]%2==0)
+                {
+                   opeven = opeven + num[i]+"even num"+"<br/>";
+                }
+                else
+                {
+                    opodd = opodd + num[i]+"odd num"+"<br/>";
+                }
+            }
+            document.getElementById("print").innerHTML = opeven;
+            document.getElementById("print1").innerHTML = opodd;
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="calculate();"> click</button>
+    <h3 id="print"></h3>
+    <h3 id="print1"></h3>
+</body>
+</html>

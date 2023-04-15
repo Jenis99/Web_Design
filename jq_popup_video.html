@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/jquery.custombox.css" rel="stylesheet"/>
+    <style>
+        #example1{
+            margin-top: 50%;
+            margin-left: 50%;
+        }
+        button.close{
+            position: relative;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <a href="#modal" id="example1">Play video</a>    
+    <div id="modal" style="display: none;" class="modal-example-content">
+        <div class="modal-example-header">
+        <button type="button" class="close"  onclick="$.fn.custombox('close');">&times;</button>
+        </div>
+        <div class="modal-example-body">
+            <iframe width="1000" height="500" class="full" src="https://www.youtube.com/embed/Gv_XBMrPvRw?autoplay=1&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="js/jquery.custombox.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#example1').on('click', function () {
+                $.fn.custombox( this, {
+                    overlay: false,
+                    effect: 'fadein'
+                });
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

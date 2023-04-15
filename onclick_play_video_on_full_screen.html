@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .video{
+            display: none;
+        }
+        .video.active{
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        overflow: hidden;
+        }
+        #cursor {
+        pointer-events: none;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        background: blue;
+        height: 150px;
+        width: 150px;
+        color: white;
+        border-radius: 50%;
+        transition: linear height 0.2s, linear width 0.2s;
+        }
+        .close-btn{
+            display: none;
+        }
+        .show-btn
+        {
+            display: block;
+            position:absolute;
+
+        }
+    </style>
+</head>
+<body>
+    <iframe src="https://www.youtube.com/embed/WK9WmV4enT8" class="video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   <img src="img/aman - Copy.jpg" alt="" class="main-img"> <button type="button" class="btn-play" id="play-btn"> Play</button> 
+   <div id="cursor">VIEW</div>
+   <button type="button" class="close-btn"> close</button>
+   <script src="js/jquery-3.6.1.min.js"></script>
+   <script>
+    // $("img").hover(function(){
+    //     $("#cursor").show();
+    // });
+    $(document).mousemove(function(e) {
+
+        const cursor = $('#cursor');
+        const target = $(event.target);
+
+        // update position of cursor
+        cursor.css('left', e.clientX-10).css('top', e.clientY-10);
+
+        const isLinkTag = target.is('img');
+
+
+        });
+
+    $("img").mouseleave(function(e) {
+
+    const cursor = $('#cursor');
+    cursor.hide()
+
+    });
+
+    $("img").mouseenter(function(e) {
+
+    const cursor = $('#cursor');
+    cursor.show()
+
+    });
+    $(document).ready(function(){
+        $("#play-btn").click(function(){
+            $(".video").addClass("active");
+    $(".close-btn").addClass("show-btn");
+        });
+    $(".close-btn").remove("show-btn");
+        });
+        $(".main-img").hover({
+    });
+    $("#close-btn").click(function(){
+        $(".close-btn").remove("show-btn");
+        });
+   
+   </script>
+</body>
+</html>

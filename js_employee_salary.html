@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Salary</title>
+    <script>
+        function calculate()
+        {
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy = today.getFullYear();
+
+            today = dd + '/' + mm + '/' + yyyy;
+            var employee = document.getElementById("name").value ;
+            var salary = document.getElementById("amount").value;
+            var provident = parseInt(salary)* 14/100 ;
+            var health = parseInt(salary)* 2 /100;
+            var dear = parseInt(salary)* 3 /100;
+            var total = parseInt(dear)+parseInt(health)
+            var net = parseInt(salary)+parseInt(dear)+parseInt(health)-parseInt(provident)
+            document.getElementById("opname").innerHTML=employee;
+            document.getElementById("pf").innerHTML = provident;
+            document.getElementById("hra").innerHTML = health;
+            document.getElementById("da").innerHTML = dear;
+            document.getElementById("full2").innerHTML = total;
+            document.getElementById("nets").innerHTML = net;
+            document.getElementById("amt").innerHTML = salary;
+            document.getElementById("date").innerHTML = today;
+            document.getElementById("full1").innerHTML = provident;
+
+
+            if (net<=25000)
+            {
+                document.getElementById("st").innerHTML = "bad";
+
+            }
+            else if(net>=25000)
+            {
+                document.getElementById("st").innerHTML = "good";
+
+            }
+            else{
+                document.getElementById("st").innerHTML = "none";
+
+            }
+
+
+           }
+    </script>
+    <style>
+        body{
+            width: 90%;
+            max-width: 900px;
+            text-align: center;
+        }
+        .tc{
+            text-align: center;
+            margin-top: 50px;
+            }
+        .ws{
+            white-space: 20px;
+        }
+        table,td{
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+        }
+        table,td,tfoot{
+            border: solid black 2px;
+        }
+        .details{
+            background-color: brown;
+        }
+        .foot{
+            background-color: darkgray;
+        }
+        .first,.second,.third{
+            background-color: lightgreen;
+        }
+        .main,.tt{
+            background-color:darkslateblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="tc">
+        Employee Name : <input type="text" name="text" id="name"><br>
+       <p> Salary : <input type="number" name="number" id="amount"> </p>
+         <button type="button" name="button" onclick="calculate();" value="click me"> calculate </button> <br><br>
+    </div>
+    <table>
+        <tr class="details">
+            <th>Name :</th>
+            <th id="opname" colspan="3"></th>
+            <th>Date: </th>
+            <th id="date" colspan="3"></th>
+        </tr>
+        <tr class="main">
+            <td colspan="2"> Minus</td>
+            <td>Amount</td>
+            <td colspan="2">Add</td>
+            <td>Amount</td>
+        </tr>
+        <tr class="first">
+            <td colspan="2"> PF</td>
+            <td id="pf"> </td>
+            <td colspan="2">HAA</td>
+            <td id="hra"></td>
+            
+        </tr>
+        <tr class="second">
+            <td colspan="2"> </td>
+            <td> </td>
+            <td colspan="2">DA</td>
+            <td id="da"></td>
+        </tr>
+        <tr class="third">
+            <td colspan="2"></td>
+            <td></td>
+            <td colspan="2"> basic salary</td>
+            <td id="amt"></td>
+        </tr>
+        <tr class="tt">
+            <th colspan="2"> total</th>
+            <th id="full1"></th>
+            <th colspan="2"> total</th>
+            <th id="full2"></th>
+        </tr>
+        </tr>
+        <tfoot class="foot">
+            <tr>
+                <td colspan="5">Net salary</td>
+                <td id="nets"></td>
+            </tr>
+            <tr>
+                <td colspan="5">status</td>
+                <td id="st"></td>
+            </tr>
+        </tfoot>
+    </table>
+     
+</body>
+</html>

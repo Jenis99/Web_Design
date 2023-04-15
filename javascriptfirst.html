@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script>
+        // Definatrion
+        function demo()
+        {
+            //alert("Welcome , Guest!");
+            //console.log("I am javascript");
+            //document.write("I am javascirpt");
+
+            var name = document.getElementById("txtname").value;
+            // document.getElementById("txtname").value = "ABC"
+            alert(name);
+        }
+    </script>
+</head>
+<body>
+
+
+    <input type="text" id="txtname"/>
+    <button type="button" onclick="demo();">Click Me</button>
+<!-- <body onload="demo();"> -->
+    <!-- 
+        1.internal
+        2.external
+        3.inline
+     -->
+</body>
+</html>

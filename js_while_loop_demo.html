@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while</title>
+    <script>
+        function calculateall()
+        {
+            var num = document.getElementById("txnum").value;
+            var i =1;
+            var total=0;
+            while (i<=num)
+            {
+                total=total + i;
+               i++;
+            }
+            alert(total);
+        }
+        function calculateodd()
+        {
+            var num = document.getElementById("txnum").value;
+            var i =1;
+            var total=0;
+            while (i<=num)
+            {
+                if(i % 2!=0)
+                {
+                    total=total + i;
+                }
+                i++;
+            }
+            alert(total);
+        }
+        function calculateeven()
+        {
+            var num = document.getElementById("txnum").value;
+            var i =1;
+            var total=0;
+            while (i<=num)
+            {
+                if(i % 2==0)
+                {
+                    total=total + i;
+                }
+                i++;
+            }
+            alert(total);
+        }
+    </script>
+</head>
+<body>
+       <input type="text" id="txnum">
+    <button type="button" onclick="calculateall();"> All</button>
+    <button type="button" onclick="calculateodd();"> Odd</button>
+    <button type="button" onclick="calculateeven();"> Even</button>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img pop-up</title>
+    <link rel="stylesheet" href="css/simple-lightbox.min.css">
+
+    <style>
+        .size{
+            width: 300px;
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <a href="img/creative.jpg" class="big" rel="rel1"><img src="img/creative.jpg" alt="Beautiful Image" class="size" title="Beautiful Image"/></a>
+        <a href="img/developer.png" rel="rel1" ><img src="img/developer.png" alt="" class="size"  title=""/></a>
+        <a href="img/digital.jpg" rel="rel2"><img src="img/digital.jpg" alt="" class="size"  title="Beautiful Image"/></a>
+        <a href="img/mobile.jpg" rel="rel2"><img src="img/mobile.jpg" class="size"  alt="" title=""/></a>
+        <div class="clear"></div>
+      </div>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/simple-lightbox.jquery.min.js"></script>
+    <script>
+        $(function(){
+          var gallery = $('.gallery a').simpleLightbox({navText:    ['&lsaquo;','&rsaquo;']});
+        });
+        
+    </script>
+</body>
+</html>

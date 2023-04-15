@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PATTERN 3</title>
+    <script>
+    function calculate5()
+    {
+        var num = document.getElementById("txtnum").value;
+        var op="";
+        for(var i=1;i<=num;i++)
+        {
+            for(var j=1;j<=i;j++)
+            {
+                op = op + i;
+            }
+            op=op+"<br/>";
+        }
+        document.getElementById("result3").innerHTML = op;
+    }
+</script>
+</head>
+<body>
+    <input type="number" id="txtnum"/>
+</body>
+</html>

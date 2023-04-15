@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>continue and break</title>
+    <script>
+         function calculate1()
+        {
+            var num = document.getElementById("txtnum").value;
+            var op="";
+            for(var i=1;i<=num;i++)
+            {
+                for(var j=i;j>=1;j--)
+                {
+                    op = op + j;
+                }
+                op=op+"<br/>";
+            }
+            document.getElementById("result").innerHTML = op;
+        }
+         
+        
+        
+        
+        function calculate2()
+        {
+            var num = document.getElementById("txtnum").value;
+            var op="";
+            var t = num*2;
+                 for( var i=1; i<=num; i++)
+                    {
+                        for(var s=1;s<=t; s++)
+                        {
+                            op=op+("&nbsp;");
+                        }
+                        for(var j=1; j<=i; j++)
+                        {
+                            op=op+j;
+                        }
+                        t=t-2;
+                    op=op + "<br>"
+                 }
+            document.getElementById("result1").innerHTML = op;
+
+        }
+        function calculatetwo()
+        {
+            var num = document.getElementById("txtnum").value;
+            var op="";
+           
+                 for( var i=1; i<=num; i++)
+                    {
+                        for(var s=1;s<=num-i; s++)
+                        {
+                            op=op+("&nbsp;&nbsp;");
+                        }
+                        for(var j=1; j<=i; j++)
+                        {
+                            op=op+j;
+                        }
+                       
+                    op=op + "<br>"
+                 }
+            document.getElementById("result2").innerHTML = op;
+
+        }
+            
+            // 
+         function calculate3()
+        {
+            var num = document.getElementById("txtnum").value;
+            var op="";
+            for( var i=1; i<=num; i++)
+            {
+               var p=1;
+               for(var j=i;j<=num;j++)
+               {
+                op=op+"&nbsp;&nbsp;";
+               }
+               for(var j=1;j<i;j++)
+               {
+                op=op+p;
+                p++;
+               }
+               for(var j=1;j<=i;j++)
+               {
+                op=op+p;
+                p--;
+               }
+               op=op+"<br/>";
+            }
+            document.getElementById("result3").innerHTML = op;
+            
+        }
+    
+    </script>
+</head>
+<body>
+        <input type="number" id="txtnum"/>
+        <button type="button" onclick="calculate1();">one</button>
+        <button type="button" onclick="calculate2();">two</button>
+        <button type="button" onclick="calculatetwo();">222</button>
+        <button type="button" onclick="calculate3();">three</button>
+        <h1 id="result"></h1>
+        <h1 id="result1"></h1>
+        <h1 id="result2"></h1>
+        <h1 id="result3"></h1>
+</body>
+</html>

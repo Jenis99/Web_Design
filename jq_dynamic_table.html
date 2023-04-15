@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table</title>
+    <style>
+        
+        .row
+        {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col-12
+        {
+            width: 100%;
+            float: left;
+        }
+        .col-11
+        {
+            width: 91.66%;
+            float: left;
+        }
+        .col-10
+        {
+            width: 83.33%;
+            float: left;
+        }
+        .col-9
+        {
+            width: 75%;
+            float: left;
+        }
+        .col-8
+        {
+            width: 66.66%;
+            float: left;
+        }
+        .col-7
+        {
+            width: 58.33%;
+            float: left;
+        }
+        .col-6
+        {
+            width: 50%;
+            float: left;
+        }
+        .col-5
+        {
+            width: 41.66%;
+            float: left;
+        }
+        .col-4
+        {
+            width: 33.33%;
+            float: left;
+        }
+        .col-3
+        {
+            width: 25%;
+            float: left;
+        }
+        .col-2
+        {
+            width: 16.66%;
+            float: left;
+        }
+        .col-1
+        {
+            width: 8.33%;
+            float: left;
+        }
+        .pad{
+            padding: 50px;
+        }
+        .mar{
+            margin-top: 20px;
+        }
+        table,tr,td,th{
+            border:2px solid black ;
+        }
+        .tc{
+            text-align: center;
+        }
+       
+    </style>
+</head>
+<body>
+      <div class="row">
+        <div class="pad">Name <br><input type="text" id="product"></div>
+        <div class="pad"> Quantity <br> <input type="number" name="" id="qty"></div>
+        <div class="pad">Price <br> <input type="number" name="" id="prc"></div>
+        <div class="pad"><button type="button" id="btn">ADD</button>
+        </div>
+    </div>
+    <table id="mytab">
+       <thead>
+        <th> Name</th>
+        <th> Quantity</th>
+        <th> Price</th>
+        <th>Total</th>
+        <th id="del">Erase</th>
+        <th id="see">view</th>
+        <th id="priii">Bellow</th>
+       </thead>
+       <tbody id="result">
+       </tbody>
+       <tfoot id="foot">
+            <tr>
+                <th colspan="7" id="finaltotal"></th>
+            </tr>
+       </tfoot>
+    </table>
+    <p id="print"></p>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script>
+        //var emptyrow= "<tr><td colspan='5' class='tc'> No Record Found </td></tr>";
+
+        $(document).ready(function(){
+            // $("#result").append(emptyrow);
+            // debugger;
+            var finaltotal=0;
+
+            $("#btn").click(function(){
+                var name = $("#product").val();
+                var quantity = $("#qty").val();
+                var price = $("#prc").val();
+                var total= quantity*price;
+                finaltotal = finaltotal + total;
+                // var op = "";
+                var op1 = "";
+                 op = "<tr id='trow'>"+ "<td id ='prname'>"+ name +"</td>" + "<td id='prqty'>"+ quantity +"</td>" + "<td id='prpri'>"+ price +"</td>" +"<td id='tat'>" + total+ "</td>"+"<td class='del'>"+"Delect"+"</td>"+"<td class='show'>"+"view"+"</td>"+"<td class='prn'>"+"Print"+"</td>"+"</tr>";
+                
+                $("#result").append(op);
+                $("#finaltotal").html(finaltotal);
+                // $("#foot").append(op1);
+                $("#product").val('');
+                $("#qty").val('');
+                $("#prc").val('');
+            });
+            $("#mytab").on('click', '.del', function() {
+                var data = $("#tat").html();
+                //alert(data);
+                finaltotal = finaltotal - data; 
+                // alert("sdc");
+                $("#trow").remove();
+                $("#finaltotal").html(finaltotal);
+            });
+
+            $("#mytab").on('click', '.show', function() {
+                var pr = $("#prname").html();
+                var qunty = $("#prqty").html();
+                var pric = $("#prpri").html();
+                $("#product").val(pr);
+                $("#qty").val(qunty);
+                $("#prc").val(pric);
+            });
+
+            $("#mytab").on('click','.prn',function(){
+                var prc = $("#prname").html();
+                var quanty = $("#prqty").html();
+                var priic = $("#prpri").html();
+                var tot = quanty*priic;
+                var oppp="";
+                oppp="Name :"+prc+"<br>"+"Quntity:"+quanty+"<br>"+"Price:"+priic+"<br>"+"Total:"+tot;
+                $("#print").html(oppp);
+
+            });
+
+        });
+    </script>
+ 
+    
+</body>
+</html>

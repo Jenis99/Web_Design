@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>yt fullscreen</title>
+    <script src="//code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="//cdn.rawgit.com/vincepare/iframeTracker-jquery/master/jquery.iframetracker.js"></script>
+</head>
+<body>
+<div class="yt">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C0DPdy98e4c" frameborder="0" allowfullscreen></iframe>
+</div>
+<script>
+$(document).ready(function($){
+    $('iframe').iframeTracker({
+      blurCallback: function(){
+        setTimeout(function(){
+          if ($('iframe').width()<=560) {
+            $('body').removeClass('yt-fullscreen');
+          }else{
+            $('body').addClass('yt-fullscreen');
+          }
+        }, 2000);
+      }
+    });
+});
+</script>
+</body>
+</html>

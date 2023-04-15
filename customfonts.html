@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Fonts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+        h2
+        {
+            font-family: 'Raleway', sans-serif;
+        } */
+
+        @font-face {
+            font-family: 'madi';
+            src: URL('fonts/MsMadi-Regular.ttf') format('truetype');
+        }
+        h2
+        {
+            font-family: 'madi', sans-serif;
+        }
+        .custom
+        {
+            font-size: 600px;
+            color: red;
+        }
+        .myclass
+        {
+            width: 400px;
+            height: 400px;
+            background-image: url('img/aman.jpg');
+        }
+    </style>
+</head>
+<body>
+    <div class="myclass">
+        <h1>Heading</h1>
+    </div>
+    <i class="fa-brands fa-facebook custom"></i>
+    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet quasi at sequi rem libero ad facere eius voluptate illo accusamus praesentium, sapiente, iure enim magni odit quas saepe quod omnis.</h2>
+</body>
+</html>

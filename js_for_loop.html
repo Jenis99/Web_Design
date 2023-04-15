@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loop</title>
+    <script>
+        function calculate()
+        {
+            var num = document.getElementById("txtname").value;
+            // for(var i=1,j=1;i<=num;i++,j++)
+            // {
+            //     alert(i +" "+j);
+            // }
+            // var i = 1;
+            // var op="";
+            // while(i<=10)
+            // {
+            //    op = op + num + "X" + i + "=" + (i*num) +"<br/>";
+            //    i++;
+            // }
+            // document.getElementById("result").innerHTML = op;
+            var op="";
+            for(var i=1;i<=10;i++)
+            {
+                op = op + num + "X" + i + "=" + (i*num) +"<br/>";
+            }
+            document.getElementById("result").innerHTML = op;
+        }
+      </script>
+</head>
+<body>
+    <input type="number" id="txtname"/>
+    <button type="button" onclick="calculate();">table</button>
+    <h1 id="result"></h1>
+</body>
+</html>

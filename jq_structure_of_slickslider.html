@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/slick.css">
+  <style>
+     .row
+        {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col-12
+        {
+            width: 100%;
+            float: left;
+        }
+        .col-11
+        {
+            width: 91.66%;
+            float: left;
+        }
+        .col-10
+        {
+            width: 83.33%;
+            float: left;
+        }
+        .col-9
+        {
+            width: 75%;
+            float: left;
+        }
+        .col-8
+        {
+            width: 66.66%;
+            float: left;
+        }
+        .col-7
+        {
+            width: 58.33%;
+            float: left;
+        }
+        .col-6
+        {
+            width: 50%;
+            float: left;
+        }
+        .col-5
+        {
+            width: 41.66%;
+            float: left;
+        }
+        .col-4
+        {
+            width: 33.33%;
+            float: left;
+        }
+        .col-3
+        {
+            width: 25%;
+            float: left;
+        }
+        .col-2
+        {
+            width: 16.66%;
+            float: left;
+        }
+        .col-1
+        {
+            width: 8.33%;
+            float: left;
+        }
+    img
+    {
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <div class="col-12">
+      <div class="slider">
+        <div class="item">
+          <img src="img/background karon.jpg" alt="" srcset="">
+        </div>
+        <div class="item">
+          <img src="img/background karon.jpg" alt="" srcset="">
+        </div>
+        <div class="item">
+          <img src="img/background karon.jpg" alt="" srcset="">
+        </div>
+        <div class="item">
+          <img src="img/background karon.jpg" alt="" srcset="">
+        </div>
+        <div class="item">
+          <img src="img/background karon.jpg" alt="" srcset="">
+        </div>
+        <div class="item">
+          <img src="img/background karon.jpg" alt="" srcset="">
+        </div>
+      </div>
+      <ul>
+        <li class="prev">pppppppp</li>
+        <li class="next">nnnnnnnn</li>
+    </ul>
+    </div>
+  </div>
+  
+  <script src="js/jquery-3.6.1.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('.slider').slick({
+      slidesToShow: 3,
+      fade:true,
+      infinite: true,
+      slidesToScroll: 3,
+      autoplay:true,
+      centerMode: true,
+      prevArrow: $('.prev'),
+      nextArrow: $('.next')
+    }).on('afterChange', function(event, slick, currentSlide, nextSlide){
+      
+     //alert("Chnaged");
+    
+    });
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/project2.css">
+    <script src="js/project2.js"></script>
+    <title>College Form</title>
+</head>
+<body>
+   <fieldset>
+        <legend class="bl"><b>College Form</b></legend>
+    <div class="row padtop">
+        
+        <div>Firstname <br><input type="text" id="fname" rows="2" placeholder="Enter Your Name  "> <p id="firstname" class="clr"></p></div>
+        <div>Middlename <br><input type="text" id="mname" placeholder="Enter Your Father Name"> <p id="middlename"  class="clr" ></p></div>
+        <div>Lastname <br><input type="text" id="lname"  placeholder="Enter Your Surname"> <p id="lastname" class="clr"></p></div>
+     </div>
+
+<div>
+    Gender
+    <br><input type="radio" name="gender"  value="M" id="mm"/> Male 
+    <input type="radio" name="gender"  value="F" id="ff"/> Female <br/>   <p id="gendererror"></p>      
+</div>
+<div class="col-12">
+   Address<textarea name="address" id="add" cols="40" rows="2" placeholder="Enter Your Address  "></textarea> <p id="address"  class="clr"></p>
+</div>
+<div class="row">
+    <div class="col-4">
+            Landmark<input type="text" id="lmark" placeholder="Enter Your Landmark"> <p id="Landmark"  class="clr" ></p>
+    </div>
+    <div class="col-4">
+            Pincode<input type="number" id="pin" placeholder="Enter Your Pincode"> <p id="Pincode"  class="clr"></p>
+    </div>
+    <div class="col-4"> 
+            city
+            <select name="city" id="ci">
+                <option value="#">Surat</option>
+                <option value="#">Ahemdabad</option>
+                <option value="#">Vadodara</option>
+                <option value="#">Vapi</option>
+                <option value="#">Porbandar</option>
+                <option value="#">Junagadh</option>
+            </select> <p id="city"  class="clr"></p>
+    </div>
+</div>
+  <div>
+    Qualification <input type="text" id="degree" placeholder="Enter Your Qualification"> <button type="button" id="btn" onclick="calculate();">Add</button><p id="Qualification"  class="clr"></p>
+  </div> 
+  <h2 id="print"></h2>
+  <div class="row">
+    <div class="col-4">
+            Total Marks<input type="text" id="marks"  placeholder="Enter Total marks"> <p id="totalmarks"  class="clr"></p>
+    </div>
+    <div class="col-4">
+            You get<input type="text" id="get" onblur="calculate1()"  placeholder="Enter What you get in exam"> <p id="youget"  class="clr"></p>
+    </div>
+    <div class="col-4">
+            Percentage<input type="text" id="per"> <p id="Percentage"  class="clr"></p>
+    </div>
+</div>
+<div class="tc">
+    <button type="button" onclick="calculate3();" >Submit </button>
+</div>
+<div>
+        <h1 id="error"></h1>
+</div>
+
+   </fieldset>   
+</body>
+</html>

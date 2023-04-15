@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image</title>
+</head>
+<body>
+    <img  src="img/aman.jpg" alt="" id="img"><br><br>
+    <button type="button" id="bt1">1</button>
+    <button type="button" id="bt2">2</button>
+    <button type="button" id="bt3">3</button>
+    <button type="button" id="bt4">4</button>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script>
+       $(document).ready(function(){
+       
+            $("#bt1").click(function(){
+                $("#img").attr("src", "img/back.jpg");
+            });
+            $("#bt2").click(function(){
+                $("#img").attr("src", "img/search.jpg");
+            });
+            $("#bt3").click(function(){
+                $("#img").attr("src", "img/voice.jpg");
+            });
+            $("#bt4").click(function(){
+                $("#img").attr("src", "img/refresh.jpg");
+            });
+
+       });
+                
+          
+    </script>
+
+</body>
+</html>

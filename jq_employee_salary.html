@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+</head>
+<body>
+        Name: <input type="text" id="name"><br><br>
+        Salary: <input type="number" id="amount"><br><br><br>
+        <button type="button" onclick="calculate();" id="btn">calculate</button>
+        
+        <div>
+            <p id="employee"></p>
+            <p id="sal"></p>
+            <p id="haa"></p>
+            <p id="da"></p>
+            <p id="basic"></p>
+            <p id="provident"></p>
+            <p id="net"></p>
+
+        </div>
+        <script src="js/jquery-3.6.1.min.js"></script>
+    <script>
+            $(document).ready(function(){
+
+                $("btn").click(function(){
+                    var employee = document.getElementById("name").value ;
+                    var salary = document.getElementById("amount").value;
+                    var provident = parseInt(salary)* 14/100 ;
+                    var health = parseInt(salary)* 2 /100;
+                    var dear = parseInt(salary)* 3 /100;
+                    var total = parseInt(dear)+parseInt(health);
+                    var net = parseInt(salary)+parseInt(dear)+parseInt(health)-parseInt(provident);
+                   
+
+                });
+            });
+    </script>
+    
+</body>
+</html>

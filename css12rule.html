@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 12 Rule</title>
+    <style>
+        .row
+        {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col-12
+        {
+            width: 100%;
+            float: left;
+        }
+        .col-11
+        {
+            width: 91.66%;
+            float: left;
+        }
+        .col-10
+        {
+            width: 83.33%;
+            float: left;
+        }
+        .col-9
+        {
+            width: 75%;
+            float: left;
+        }
+        .col-8
+        {
+            width: 66.66%;
+            float: left;
+        }
+        .col-7
+        {
+            width: 58.33%;
+            float: left;
+        }
+        .col-6
+        {
+            width: 50%;
+            float: left;
+        }
+        .col-5
+        {
+            width: 41.66%;
+            float: left;
+        }
+        .col-4
+        {
+            width: 33.33%;
+            float: left;
+        }
+        .col-3
+        {
+            width: 25%;
+            float: left;
+        }
+        .col-2
+        {
+            width: 16.66%;
+            float: left;
+        }
+        .col-1
+        {
+            width: 8.33%;
+            float: left;
+        }
+        ul.menu
+        {
+            text-align: right;
+        }
+        ul.menu li
+        {  
+            display: inline-block;
+            margin-top: 30px;
+        }
+        ul.menu li a
+        {
+            padding: 20px;
+            text-decoration: none;
+            font-size: 22px;
+            color: #b71c1c;
+            font-weight: bold;
+        }
+        ul.menu li a:hover
+        {
+            background-color: #b71c1c;
+            color: #ffffff;
+        }
+        .text-center
+        {
+            text-align: center;
+        }
+        .mt-20
+        {
+            margin-top: 20px;
+        }
+        .service-img
+        {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-4">
+            <img src="https://picsum.photos/300/600"/>
+        </div>
+        <div class="col-8">
+            <div class="row">
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-2">2</div>
+                        <div class="col-2">2</div>
+                        <div class="col-2">2</div>
+                        <div class="col-2">2</div>
+                        <div class="col-2">2</div>
+                        <div class="col-2">2</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img src="https://picsum.photos/300/300"/>
+                </div>
+                <div class="col-6">
+                    <img src="https://picsum.photos/300/300"/>
+                </div>
+                <div class="col-6">
+                    <img src="https://picsum.photos/300/300"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- LOGO/MENU -->
+    <header>
+        <div class="row">
+            <div class="col-2">
+                <img src="img/logo.png" width="120"/>
+            </div>
+            <div class="col-10">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">About</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Services</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Shop</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Contact</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- LOGO/MENU -->
+
+
+    <!-- SLIDER -->
+    <div class="hero">
+        <div class="row">
+            <div class="col-12 text-center mt-20">
+                <img src="https://picsum.photos/1250/400"/>
+            </div>
+        </div>
+    </div>
+    <!-- SLIDER -->
+
+
+    <!-- SERVICES -->
+    <div class="services">
+        <div class="row">
+            <div class="col-4 text-center mt-20">
+                <img class="service-img" src="https://picsum.photos/300/200"/>
+                <h2 class="service-heading">Web Development</h2>
+                <p class="service-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque qui consequuntur et voluptate deleniti exercitationem! Ratione, sit possimus! Blanditiis labore suscipit expedita, nobis ipsum necessitatibus illum magni fugiat ullam. Quibusdam.</p>
+            </div>
+            <div class="col-4 text-center mt-20">
+                <img class="service-img" src="https://picsum.photos/300/200"/>
+                <h2 class="service-heading">Web Development</h2>
+                <p class="service-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque qui consequuntur et voluptate deleniti exercitationem! Ratione, sit possimus! Blanditiis labore suscipit expedita, nobis ipsum necessitatibus illum magni fugiat ullam. Quibusdam.</p>
+            </div>
+            <div class="col-4 text-center mt-20">
+                <img class="service-img" src="https://picsum.photos/300/200"/>
+                <h2 class="service-heading">Web Development</h2>
+                <p class="service-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque qui consequuntur et voluptate deleniti exercitationem! Ratione, sit possimus! Blanditiis labore suscipit expedita, nobis ipsum necessitatibus illum magni fugiat ullam. Quibusdam.</p>
+            </div>
+            <div class="col-4 text-center mt-20">
+                <img class="service-img" src="https://picsum.photos/300/200"/>
+                <h2 class="service-heading">Web Development</h2>
+                <p class="service-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque qui consequuntur et voluptate deleniti exercitationem! Ratione, sit possimus! Blanditiis labore suscipit expedita, nobis ipsum necessitatibus illum magni fugiat ullam. Quibusdam.</p>
+            </div>
+            <div class="col-4 text-center mt-20">
+                <img class="service-img" src="https://picsum.photos/300/200"/>
+                <h2 class="service-heading">Web Development</h2>
+                <p class="service-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque qui consequuntur et voluptate deleniti exercitationem! Ratione, sit possimus! Blanditiis labore suscipit expedita, nobis ipsum necessitatibus illum magni fugiat ullam. Quibusdam.</p>
+            </div>
+            <div class="col-4 text-center mt-20">
+                <img class="service-img" src="https://picsum.photos/300/200"/>
+                <h2 class="service-heading">Web Development</h2>
+                <p class="service-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque qui consequuntur et voluptate deleniti exercitationem! Ratione, sit possimus! Blanditiis labore suscipit expedita, nobis ipsum necessitatibus illum magni fugiat ullam. Quibusdam.</p>
+            </div>
+        </div>
+    </div>
+    <!-- SERVICES -->
+
+    <!-- VIDEO -->
+    <div class="video">
+        <div class="row">
+            <div class="col-12 text-center mt-20">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/co516DbAAyw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- VIDEO -->
+    <!--  -->
+
+    <!-- INTRO -->
+    <div class="intro">
+        <div class="row">
+            <div class="col-6 mt-20">
+                <img  src="https://picsum.photos/600/600"/>
+            </div>
+            <div class="col-6 mt-20">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi mollitia aut ut alias labore totam, deserunt quos rerum, quam consequatur perspiciatis necessitatibus sequi aperiam, nisi vitae ab ea voluptatibus? Rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minus mollitia excepturi laboriosam. Eos nam consequuntur perspiciatis vitae cum quod laudantium ad autem quidem distinctio accusamus, nesciunt repellendus cupiditate ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium odio quasi aspernatur delectus laborum eum magnam at cumque omnis quaerat nihil, suscipit, iure facilis quidem soluta velit quia deleniti ab.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi mollitia aut ut alias labore totam, deserunt quos rerum, quam consequatur perspiciatis necessitatibus sequi aperiam, nisi vitae ab ea voluptatibus? Rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minus mollitia excepturi laboriosam. Eos nam consequuntur perspiciatis vitae cum quod laudantium ad autem quidem distinctio accusamus, nesciunt repellendus cupiditate ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium odio quasi aspernatur delectus laborum eum magnam at cumque omnis quaerat nihil, suscipit, iure facilis quidem soluta velit quia deleniti ab.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi mollitia aut ut alias labore totam, deserunt quos rerum, quam consequatur perspiciatis necessitatibus sequi aperiam, nisi vitae ab ea voluptatibus? Rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minus mollitia excepturi laboriosam. Eos nam consequuntur perspiciatis vitae cum quod laudantium ad autem quidem distinctio accusamus, nesciunt repellendus cupiditate ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium odio quasi aspernatur delectus laborum eum magnam at cumque omnis quaerat nihil, suscipit, iure facilis quidem soluta velit quia deleniti ab.</p>
+            </div>
+        </div>
+    </div>
+    <!-- INTRO -->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="row">
+            <div class="col-3">LINK</div>
+            <div class="col-3">LINK</div>
+            <div class="col-6">MAP</div>
+        </div>
+    </footer>
+    <!-- FOOTER -->
+</body>
+</html>

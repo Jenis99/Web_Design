@@ -1,0 +1,75 @@
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Modally: Nested Modal Plugin Examples</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Libre+Caslon+Display&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/copy_popup.css">
+        <link rel="stylesheet" href="jquery.modally.css?v3">
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
+        <script type="text/javascript" src="jquery.modally.js?v3"></script>
+    </head>
+    <body>
+        <div class="container">
+            <main>
+                <section class="hero">
+                    <div class="table">
+                        <div class="cell">
+                            <h1 class="serif">Modally: Nested Modal Plugin Examples</h1>
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+                            <a href="#lorem" target="_modal" class="button white">Launch</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="lorem" modally-max_width="1000">
+                    <h1 class="modal-title serif">Hey there!</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Yes I am this lazy.</p>
+                    <div class="button-wrap">
+                        <a target="_modal:close" class="button small">Close me!</a><a href="#ipsum" target="_modal" class="button gradient small">Open 2nd one!</a>
+                    </div>
+                </div>
+                <div id="ipsum">
+                    <h1 class="modal-title serif">You still here?!</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Yes I am this lazy.</p>
+
+                    <div class="button-wrap">
+                        <a class="button small modally-close">Close me!</a><a href="#dolor" target="_modal:open" class="button gradient small">Open 3rd one!</a>
+                    </div>
+                </div>
+
+                <div id="dolor" modally-max_width="500">
+                    <h1 class="modal-title serif">I'm the last one.</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Yes I am this lazy.</p>
+
+                    <div class="button-wrap">
+                        <a href="#dolor" target="_modal:close" class="button gradient small">Close me!</a>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                $('#ipsum').modally('ipsum', {max_width: 800});
+                $('#lorem').modally();
+                $('#dolor').modally();
+            });
+        </script>
+        <script type="text/javascript">
+
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    </body>
+</html>

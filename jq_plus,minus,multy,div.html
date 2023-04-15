@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths</title>
+</head>
+<body>
+    NUMBER:1<input type="number" id="num1">
+    NUMBER:2<input type="number" id="num2"><br><br>
+    <button type="button" id="plus">+</button>
+    <button type="button" id="minus">-</button>
+    <button type="button" id="div">/</button>
+    <button type="button" id="mult">*</button>
+    <h3 id="print"></h3>
+
+
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+
+            $("#plus").click(function(){
+                var number1=$("#num1").val();
+                var number2=$("#num2").val();
+                var total=parseInt(number1)+parseInt(number2);
+                $('#print').html("Total : "+total);
+            })
+            $("#minus").click(function(){
+                var number1=$("#num1").val();
+                var number2=$("#num2").val();
+                var total=parseInt(number1)-parseInt(number2);
+                $('#print').html("Total : "+total);
+            })
+            $("#div").click(function(){
+                var number1=$("#num1").val();
+                var number2=$("#num2").val();
+                var total=parseInt(number1)/parseInt(number2);
+                $('#print').html("Total : "+total);
+            })
+            $("#mult").click(function(){
+                var number1=$("#num1").val();   
+                var number2=$("#num2").val();
+                var total=parseInt(number1)*parseInt(number2);
+                $('#print').html("Total : "+total);
+            })
+        })
+    </script>
+
+</body>
+</html>

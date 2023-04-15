@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery example</title>
+    <style>
+        .c3
+        {
+            color:red;
+            background-color: aqua;
+            font-size: 100px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        1. internal
+        2. External
+     -->
+
+
+     <h1 id="head3">Heading</h1>
+
+
+     <input   type="password" placeholder="Enter Password" id="txtname"/>
+     <button type="button" id="btn">Click Me</button>
+     <p id="op">This is P tag with <b>Bold</b></p>
+
+
+     <!-- <script src="js/jquery-3.6.1.min.js"></script> -->
+     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+     <script>
+        $(document).ready(function(){
+            
+
+
+            $("#btn").click(function(){
+
+
+               // var type = $("#txtname").attr("placeholder");
+                //alert(type);
+
+                var s = $("#txtname").attr("data-adderss");
+                alert(s);
+                //$("#txtname").attr("type","text");
+
+
+
+
+//                $("#head3").css("color","red").css("font-size","100px");
+
+           // $("#head3").addClass("c3");
+
+          // $("#head3").removeClass("c3");
+          //$("#head3").toggleClass("c3");
+                
+                //var name = $("#txtname").val();
+               // alert("Name : "+name);
+               //$("#txtname").val("I am from jquery");
+
+            //    var result = $("#op").html();
+            //    alert(result);
+
+            // $("#op").append("Hello <b>Jquery</b>");
+
+            });
+
+            
+
+
+        });
+     </script>
+</body>
+</html>

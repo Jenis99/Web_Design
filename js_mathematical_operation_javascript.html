@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Operation</title>
+    <script>
+        function calculate()
+        {
+            //string - "ABC"
+            //int - 90
+            //float - 90.12;
+            //charcter - 'c'
+
+            var n1 = document.getElementById("txtnum1").value;
+            var n2 = document.getElementById("txtnum2").value;
+            var total = parseInt(n1) + parseInt(n2);
+            document.getElementById("result").innerHTML = "Total : " + total;
+        }
+    </script>
+</head>
+<body>
+    Number 1 <input id="txtnum1" type="text" name="text"><br/>
+    Number 2 <input id="txtnum2" type="text" name="text"><br/>
+    <button type="button" onclick="calculate();"> click me</button>
+    <h1 id="result"></h1>
+</body>
+</html>

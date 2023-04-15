@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern</title>
+    <script>
+        function calculate()
+        {
+            var num = document.getElementById("txtnum").value;
+            var op="";
+            for(var i=1;i<=num;i++)
+            {
+                for(var j=1;j<=i;j++)
+                {
+                    op = op + j;
+                }
+                op=op+"<br/>";
+            }
+            document.getElementById("result1").innerHTML = op;
+        }
+        function calculate4()
+        {
+            var num = document.getElementById("txtnum").value;
+            var op="";
+            for(var i=num;i>=1;i--)
+            {
+                for(var j=i;j>=1;j--)
+                {
+                    op = op + j;
+                }
+                op=op+"<br/>";
+            }
+            document.getElementById("result2").innerHTML = op;
+        }
+        function calculate5()
+        {
+            var num = document.getElementById("txtnum").value;
+            var op="";
+            for(var i=1;i<=num;i++)
+            {
+                for(var j=1;j<=i;j++)
+                {
+                    op = op + i;
+                }
+                op=op+"<br/>";
+            }
+            document.getElementById("result3").innerHTML = op;
+        }
+
+        
+       
+        
+        function calculater()
+        {
+            var num = document.getElementById("txtnum").value;
+            var op="";
+            for(var i=num;i>=1;i--)
+            {
+                for(var j=1;j<=i;j++)
+                    {
+                        op = op + i;
+                    }
+                    op=op+"<br/>";
+            }
+            document.getElementById("result4").innerHTML = op;
+        }
+        function calculate3()
+        {
+            var num = document.getElementById("txtnum").value;
+            var op="";
+            for(var i=1;i<=num;i++)
+            {
+                for(var j=num;j>=i;j--)
+                {
+                    op = op + j;
+                }
+                op=op+"<br/>";
+            }
+            document.getElementById("result5").innerHTML = op;
+        }
+
+    </script>
+</head>
+<body>
+    <input type="number" id="txtnum"/>
+    <button type="button" onclick="calculate();">One</button>
+    <button type="button" onclick="calculate4();">TWO</button>
+    <button type="button" onclick="calculate5();">Three</button>
+    <button type="button" onclick="calculater();">Four</button>
+    <button type="button" onclick="calculate3();">Five</button>
+    <p> <h1 id="result1"></h1></p>
+    <p><h1 id="result2"></h1></p>
+    <p> <h1 id="result3"></h1></p>
+    <p><h1 id="result4"></h1></p>
+    <p><h1 id="result5"></h1></p>
+    
+</body>
+</html>

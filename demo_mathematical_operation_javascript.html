@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical operation</title>
+    <script>
+        function calculate_plus()
+        {
+            var n1 = document.getElementById("txtname1").value;
+            var n2 = document.getElementById("txtname2").value;
+            var total = parseInt(n1) + parseInt(n2);
+            document.getElementById("result").innerHTML = total;
+        }
+        function calculate_mins()
+        {
+        var n1 = document.getElementById("txtname1").value;
+        var n2 = document.getElementById("txtname2").value;
+        var total = parseInt(n1) - parseInt(n2);    
+        document.getElementById("result").innerHTML = total;
+        }
+        function calculate_div()
+        {
+        var n1 = document.getElementById("txtname1").value;
+        var n2 = document.getElementById("txtname2").value;
+        var total = parseInt(n1) / parseInt(n2);
+        document.getElementById("result").innerHTML = total;
+        }
+        function calculate_mul()
+        {
+        var n1 = document.getElementById("txtname1").value;
+        var n2 = document.getElementById("txtname2").value;
+        var total = parseInt(n1) * parseInt(n2);     
+        document.getElementById("result").innerHTML = + total;
+        }
+    </script>
+    <style>
+        body{
+            text-align: center;
+            margin-top: 50px;
+        }
+        .bt{
+           width: 50px;
+           height: 50px;
+           font-size: 25px;
+           background-color: brown;
+        }
+        h2{
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-size: 150px;
+            width: auto;
+            height: auto;
+         }
+       #result{
+        text-align: center;
+       }
+       .cl{
+        background-color: darkgray;
+        color: black;
+       }
+       .action
+       {
+        margin-top: 50px;
+       }
+    </style>
+</head>
+<body>
+        Number-1<input id="txtname1" class="cl" type="text" name="text"><br><br>
+        Number-2<input id="txtname2" class="cl" type="text" name="text"><br>
+
+        <div class="action">
+            <button class="bt" type="button" onclick="calculate_plus()"  value="click me">+</button> 
+            <button class="bt" type="button" onclick="calculate_mins()" value="click me">-</button>
+            <button class="bt" type="button" onclick="calculate_div()"  value="click me">/</button>
+            <button class="bt" type="button" onclick="calculate_mul()"  value="click me">*</button>
+        </div>
+        <h2 id="result">20</h2>
+    
+</body>
+</html>

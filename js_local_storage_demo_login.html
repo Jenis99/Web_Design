@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log in</title>
+    <style>
+        #warning{
+            color: red;
+        }
+    </style>
+    <script>
+        function storage()
+        {
+            var username = document.getElementById("txtemail").value;
+            var password = document.getElementById("txtpass").value;
+           
+            
+            if(username=="test@gmail.com"&&(password=="123"))
+            {
+                localStorage.setItem("Email",username);
+                localStorage.setItem("Password",password);
+               //redirect
+               window.location="js_home.html";
+            }
+            else
+            {
+               
+                document.getElementById("warning").innerHTML= "email or passoword not match";
+            }
+
+        }
+        function home()
+        {
+            var username = localStorage.getItem("Email");
+            var password = localStorage.getItem("Password");
+            if(username&&password)
+            {
+                window.location="js_home.html";
+            }
+    }
+    </script>
+</head>
+<body onload="home();">
+    Email : - <input type="email" id="txtemail"> <br><br>
+    Password : - <input type="password"  id="txtpass"><br><br><br>
+    <button type="button" onclick="storage();"> Log in </button>
+    <h3 id="warning"></h3>
+</body>
+</html>

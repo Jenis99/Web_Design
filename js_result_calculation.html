@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <script>
+       function calculate()
+        {
+            var n = document.getElementById("na").value
+            var r = document.getElementById("ro").value
+            var sub1 = document.getElementById("su1").value
+            var sub2 = document.getElementById("su2").value
+            var sub3 = document.getElementById("su3").value
+            var total = parseInt(sub1) + parseInt(sub2) + parseInt(sub3)
+            var percentage = parseInt(total) / 3
+            document.getElementById("opname").innerHTML = n;
+            document.getElementById("no").innerHTML = r;
+            document.getElementById("s1").innerHTML = sub1;
+            document.getElementById("s2").innerHTML = sub2;
+            document.getElementById("s3").innerHTML = sub3;
+            document.getElementById("total").innerHTML = total;
+            document.getElementById("pr").innerHTML = percentage;
+
+
+            // class
+          if(percentage>=70)
+          {
+            document.getElementById("cl").innerHTML = "distriction";
+          }
+          else if(percentage>=60)
+            {
+                document.getElementById("cl").innerHTML = "first";
+
+            }
+          else if(percentage>=50)
+            {
+                document.getElementById("cl").innerHTML = "second";
+
+            }
+          else if(percentage>=40)
+            {
+                document.getElementById("cl").innerHTML = "pass";
+
+            }
+          else
+            {
+                document.getElementById("cl").innerHTML = "fail";
+
+            }
+        }
+       
+    </script>
+    <style>
+        .tc{
+            text-align: center;
+        }
+        .mt{
+            margin-top: 70px;
+            text-align: center;
+        }
+        table,tr{
+            margin-left: auto;
+            margin-right: auto;
+           
+            border-collapse: collapse;
+        }
+        table,tr{
+            border: solid black 2px;
+        }
+    </style>
+    
+</head>
+<body>
+        <div class="tc">
+            Name<input id="na" type="text" name=""><br><br>
+            Roll No.<input id="ro" type="number" name=""><br><br>
+            Maths<input id="su1" type="text" name=""><br><br>
+            Science<input id="su2" type="text" name=""><br><br>
+            English<input id="su3" type="text" name=""><br><br>
+            <button type="button" name="button" value="click me" onclick="calculate();">Show</button>
+
+        </div>
+        <div class="mt">
+            <table>
+                <tr>
+                    <th> Name
+                    
+                    <td id="opname"></td>
+
+                </tr>
+                <tr>
+                    <th> Roll No.</th>
+                    <td  id="no"></td>
+                </tr>
+                <tr>
+                    <th> Subject-1</th>
+                    <td id="s1"></td>
+                </tr>
+                <tr>
+                    <th> Subject-2</th>
+                    <td id="s2"></td>
+                </tr>
+                <tr>
+                    <th> Subject-3</th>
+                    <td id="s3"></td>
+                </tr>
+                <tr>
+                    <th>Total</th>
+                    <td id="total"></td>
+                </tr>
+                <tr>
+                    <th>Pecentage</th>
+                    <td id="pr"></td>
+                </tr>
+                <tr>
+                    <th>Class</th>
+                    <td id="cl"></td>
+                </tr>
+
+            </table>
+        </div>
+
+</body>
+</html>

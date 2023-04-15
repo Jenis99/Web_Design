@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script>
+        function logout()
+        {
+            localStorage.clear();
+            window.location="js_local_storage_demo_login.html";
+
+
+        }
+        function home()
+        {
+            var username = localStorage.getItem("Email");
+            var password = localStorage.getItem("Password");
+            if(username&&password)
+            {
+                window.location="js_home.html";
+            }
+            else{
+                    window.location="js_local_storage_demo_login.html";
+                }
+    }
+    </script>
+</head >
+<body onload="home();">
+    <button type="button" onclick="logout()"> log out</button>
+</body>
+</html>

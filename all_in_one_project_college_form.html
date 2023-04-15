@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/project.css">
+    <script src="js/project.js"></script>
+    <title>College Form</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-4">
+                Firstname<input type="text" id="fname"> <h5 id="firstname" class="clr"></h5>
+        </div>
+        <div class="col-4">
+                Middlename<input type="text" id="mname"> <h5 id="middlename"  class="clr"></h5>
+        </div>
+        <div class="col-4">
+                Lastname<input type="text" id="lname"> <h5 id="lastname" class="clr"></h5>
+        </div>
+    </div>
+        <div class="tc">
+            Gender
+            <br><input type="radio" name="gender"  value="M" id="mm"/> Male 
+            <input type="radio" name="gender"  value="F" id="ff"/> Female <br/>   <h5 id="gendererror"></h5>      
+        </div>
+        <div class="col-12 tc">
+           <legend>Address</legend> <textarea name="address" id="add" cols="30" rows="10"></textarea> <h5 id="address"  class="clr"></h5>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                    Landmark<input type="text" id="lmark"> <h5 id="Landmark"  class="clr"></h5>
+            </div>
+            <div class="col-4">
+                    Pincode<input type="number" id="pin"> <h5 id="Pincode"  class="clr"></h5>
+            </div>
+            <div class="col-4"> 
+                    city
+                    <select name="city" id="ci">
+                        <option value="#">Surat</option>
+                        <option value="#">Ahemdabad</option>
+                        <option value="#">Vadodara</option>
+                        <option value="#">Vapi</option>
+                        <option value="#">Porbandar</option>
+                        <option value="#">Junagadh</option>
+                    </select> <h5 id="city"  class="clr"></h5>
+            </div>
+        </div>
+          <div class="pading">
+            Qualification <input type="text" id="degree"> <button type="button" id="btn" onclick="calculate();">Add</button><h5 id="Qualification"  class="clr"></h5>
+          </div> 
+          <h2 id="print"></h2>
+          <div class="row">
+            <div class="col-4">
+                    Total Marks<input type="text" id="marks"> <h5 id="totalmarks"  class="clr"></h5>
+            </div>
+            <div class="col-4">
+                    You get<input type="text" id="get" onblur="calculate1()"> <h5 id="youget"  class="clr"></h5>
+            </div>
+            <div class="col-4">
+                    Percentage<input type="text" id="per"> <h5 id="Percentage"  class="clr"></h5>
+            </div>
+        </div>
+        <div class="tc">
+            <button type="button" onclick="calculate3();" >Submit </button>
+        </div>
+        <div>
+                <h1 id="error"></h1>
+        </div>
+          
+</body>
+</html>

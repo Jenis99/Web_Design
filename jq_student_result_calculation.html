@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    NAME:<input type="text" id="nm"><br><br>
+    ROLL NUMBER:<input type="text" id="rollnum"><br><br>
+    MATHS:<input type="text" id="sub1"><br><br>
+    SCIENCE:<input type="text" id="sub2"><br><br>
+    ENGLISH:<input type="text" id="sub3"><br><br><br>
+    <button type="button" id="btn">Show</button>
+
+
+
+    <p id="name"></p>
+    <p id="rol"></p>
+    <p id="math"></p>
+    <p id="sci"></p>
+    <p id="eng"></p>
+    <p id="tot"></p>
+    <p id="per"></p>
+    <p id="class"></p>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#btn").click(function(){
+                var name=$("#nm").val();
+                var number=$("#rollnum").val();
+                var Subject1=$("#sub1").val();
+                var Subject2=$("#sub2").val();
+                var Subject3=$("#sub3").val();
+                var total=parseInt(Subject1)+parseInt(Subject2)+parseInt(Subject3);
+                var percentage=total/ 3;
+                $("#name").html("Name :"+name);
+                $("#rol").html("Roll No. :"+number);
+                $("#math").html("Maths :"+Subject1);
+                $("#sci").html("Science :"+Subject2);
+                $("#eng").html("English :"+Subject3);
+                $("#tot").html("Total :"+total);
+                $("#per").html("Percentage:"+percentage+"%");
+
+
+                if(percentage>=70)
+          {
+            $("#class").html("Class : Distiction");
+          }
+          else if(percentage>=60)
+            {
+                $("#class").html("Class : First");
+
+            }
+          else if(percentage>=50)
+            {
+                $("#class").html("Class : Second");
+
+            }
+          else if(percentage>=40)
+            {
+                $("#class").html("Class : Pass");
+
+            }
+          else
+            {
+                $("#class").html("Class : Fail");
+
+            }
+                
+            })
+        })
+    </script>
+
+
+
+
+
+
+</body>
+</html>
